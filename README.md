@@ -1,59 +1,76 @@
-# Training
+# Training Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+This is an Angular application built with modern practices, including **Feature-Sliced Design (FSD)** architecture and **server-side rendering (SSR)**.
 
-## Development server
+## 🚀 Getting Started
 
-To start a local development server, run:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 18 or higher recommended)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone <repository-url>
+    cd training
+    ```
+
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+## 🛠️ Development
+
+### Start the Development Server
+
+To start the local development server:
 
 ```bash
+npm start
+# or
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Code Formatting
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+This project uses **[Biome](https://biomejs.dev/)** for fast code formatting and linting.
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+To format your code, run:
 
 ```bash
-ng generate --help
+npm run format
 ```
 
-## Building
+This ensures a consistent code style across the project.
 
-To build the project run:
+### Building for Production
+
+To build the project for production:
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## 📂 Project Structure
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+This project follows a modular architecture inspired by **Feature-Sliced Design**.
+
+-   `src/app/entities`: Business entities (e.g., Post, User).
+-   `src/app/features`: Feature logic (e.g., PostList).
+-   `src/app/pages`: Application pages (e.g., HomePage).
+-   `src/app/shared`: Shared utilities, UI components, and services.
+
+## 🧪 Testing
+
+To run unit tests:
 
 ```bash
-ng test
+npm test
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
