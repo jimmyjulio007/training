@@ -1,11 +1,12 @@
 <main class="p-8">
-    <h1 class="text-3xl font-bold mb-6">Values from JSONPlaceholder</h1>
+    <div class="flex items-center justify-between mb-6">
+        <h1 class="text-3xl font-bold">Values from JSONPlaceholder</h1>
+        <app-theme-toggle></app-theme-toggle>
+    </div>
 
     @if (posts$ | async; as posts) {
     <app-post-list [posts]="posts" />
     } @else {
-    <div class="flex justify-center items-center h-48">
-        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
-    </div>
+    <app-post-list-skeleton />
     }
 </main>

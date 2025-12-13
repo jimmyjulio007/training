@@ -16,11 +16,13 @@ import { ZardDropdownModule } from "@shared/components/dropdown/dropdown.module"
     </button>
 
     <z-dropdown-menu-content #themeMenu>
-      <div z-dropdown-item (click)="darkMode.disable()">
-        Light
+      <div z-dropdown-menu-item (click)="darkMode.disable()">
+        <i z-icon zType="sun" class="mr-2 h-4 w-4"></i>
+        <span>Light</span>
       </div>
-      <div z-dropdown-item (click)="darkMode.enable()">
-        Dark
+      <div z-dropdown-menu-item (click)="darkMode.enable()">
+         <i z-icon zType="moon" class="mr-2 h-4 w-4"></i>
+        <span>Dark</span>
       </div>
     </z-dropdown-menu-content>
   `,
